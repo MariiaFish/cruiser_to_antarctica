@@ -1,0 +1,60 @@
+.btn {
+  display: inline-flex;
+  padding: 10px 20px;
+
+  color: $color-default-black;
+
+  background-color: $color-default-white;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  transition: opacity $trans-default;
+
+  &--navigation-toggle {
+    display: none;
+    width: 24px;
+    height: 12px;
+    background-color: $color-transparent;
+  }
+
+  &--catalog-order {
+    max-width: 210px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &--reservation-submit {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+@include vp-1023 {
+  .btn {
+    &--catalog-order {
+      max-width: 239px;
+      flex-wrap: wrap;
+    }
+  }
+}

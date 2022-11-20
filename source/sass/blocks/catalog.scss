@@ -1,0 +1,166 @@
+.catalog {
+  padding-top: 90px;
+  padding-bottom: 120px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 48px;
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  gap: 30px;
+
+  margin: 0 15px;
+}
+
+.catalog__item {
+  position: relative;
+}
+
+.catalog__item-hover-cover {
+  display: none;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px 25px 33px 25px;
+
+  color: $color-white;
+  background-color: $color-prussian-blue;
+
+  h3 {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  p {
+    margin: 0;
+
+    color: $color-quartz;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.catalog__item-main-cover {
+  position: relative;
+
+
+  @include hover-focus {
+    display: none;
+  }
+
+  &:hover + .catalog__item-hover-cover,
+  &:focus + .catalog__item-hover-cover {
+    display: flex;
+  }
+
+  h3 {
+    margin: 0;
+    position: absolute;
+    bottom: 22px;
+    left: 30px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-white;
+  }
+}
+
+.catalog__cruise-description-list {
+  margin-top: 19px;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.catalog__cruise-description-item {
+  padding-bottom: 11px;
+}
+
+@include vp-1023 {
+  .catalog {
+    padding-top: 89px;
+    padding-bottom: 100px;
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(2, 48%);
+  }
+
+  .catalog__item-main-cover {
+    h3 {
+      bottom: 28px;
+      left: 35px;
+    }
+  }
+
+  .catalog__item-hover-cover {
+    padding-left: 34px;
+    background-color: $color-tangaroa;
+  }
+
+  .catalog__cruise-description-list {
+    margin-top: 16px;
+  }
+}
+
+@include vp-767 {
+  .catalog {
+    padding-top: 45px;
+    padding-bottom: 65px;
+
+    h2 {
+      margin-bottom: 31px;
+
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    h3 {
+      bottom: 17px;
+      left: 24px;
+    }
+  }
+
+  .catalog__list {
+    grid-template-columns: 1fr;
+
+    margin: 0 10px;
+  }
+
+  .catalog__item-hover-cover {
+    padding-left: 25px;
+    padding-top: 26px;
+    min-height: 386px;
+  }
+
+  .catalog__cruise-description-item {
+    padding-bottom: 12px;
+  }
+}

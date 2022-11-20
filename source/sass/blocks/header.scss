@@ -1,0 +1,162 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  z-index: 2;
+}
+
+.header__logo {
+  align-self: flex-start;
+  padding-right: 10px;
+  margin: 0;
+}
+
+.header__navigation {
+  width: 600px;
+}
+
+@include vp-1023 {
+  .header {
+    flex-wrap: nowrap;
+    margin-top: 17px;
+  }
+
+  .header__navigation {
+    width: 503px;
+  }
+}
+
+@include vp-767 {
+  .header {
+    position: relative;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .wrapper--no-js .header__navigation-btn {
+    display: none;
+  }
+
+  // Стили для меню навигации при отключенном js
+  [data-navigation-menu="close"],
+  .wrapper--no-js[data-navigation-menu="open"] {
+    .body-overlay {
+      display: none;
+    }
+  }
+
+  .wrapper--no-js[data-navigation-menu="open"] {
+    .header.container {
+      margin: 0;
+      padding: 20px 0 0 15px;
+    }
+
+    .logo {
+      margin-left: 25px;
+    }
+
+    .header__navigation {
+      position: relative;
+      min-height: 100%;
+      top: 0;
+    }
+  }
+
+  // Стили для кнопки открытого меню навигации
+  [data-navigation-toggle-btn="open"] {
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 4%;
+    width: 13px;
+    height: 13px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-image: url("../img/svg/close-button.svg");
+    background-position: center;
+  }
+
+  // Стили для кнопки закрытого меню навигации
+  [data-navigation-toggle-btn="close"] {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 5%;
+    width: 24px;
+    height: 12px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-image: url("../img/svg/burger-menu.svg");
+    background-position: center;
+  }
+
+  // Стили для закрытого меню навигации
+  [data-navigation-menu="close"] {
+    background-color: transparent;
+
+    .header__navigation {
+      display: none;
+    }
+
+    .logo__icon {
+      fill: $color-default-white;
+    }
+  }
+
+  // Стили для открытого меню навигации
+  [data-navigation-menu="open"] {
+    .body-overlay {
+      position: absolute;
+      display: flex;
+      flex-shrink: 1;
+      justify-content: center;
+      align-items: center;
+      left: -5px;
+      top: 0;
+      width: 100%;
+      min-height: 100%;
+      z-index: 1;
+      background-color: $color-overlay-allport;
+    }
+
+    .header.container {
+      width: auto;
+      margin: 0 0 0 35px;
+      padding: 20px 16px 0 15px;
+    }
+
+    .header {
+      background-color: $color-default-white;
+    }
+
+    .header__navigation {
+      position: absolute;
+      top: 48px;
+      right: 0;
+      width: 100%;
+      min-height: 568px;
+      padding-left: 25px;
+      align-self: flex-start;
+      background-color: $color-default-white;
+      z-index: 5;
+    }
+
+    .header__navigation-list {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .header__navigation-item {
+      margin-bottom: 5px;
+    }
+
+    .header__navigation-link {
+      width: 100%;
+      padding: 6px 20px 17px 25px;
+    }
+  }
+}

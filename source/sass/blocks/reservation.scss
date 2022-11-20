@@ -1,0 +1,211 @@
+.reservation {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $color-picton-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina-bg("../img/bg/bg-glacier-in-sea-desktop");
+}
+
+.reservation__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reservation__text-container {
+  margin-right: 16px;
+  margin-top: 166px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  p {
+    max-width: 360px;
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.reservation__form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 403px;
+  padding: 45px 50px 50px;
+  background-color: $color-tangaroa;
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-white;
+  }
+}
+
+.reservation__form {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  width: 100%;
+  padding-top: 29px;
+  color: $color-white;
+
+  input {
+    width: 100%;
+    padding: 11px 16px;
+    border: none;
+  }
+
+  input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-tangaroa-placeholder;
+  }
+}
+
+.reservation__input-container {
+  margin-bottom: 22px;
+}
+
+.reservation__submit-btn {
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.reservation__input-container--checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin-top: 0;
+    margin-right: 5px;
+    background-color: $color-white;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 10px;
+    height: 7px;
+    background-image: url("../img/svg/checkbox-checked.svg");
+    background-repeat: no-repeat;
+  }
+
+  label {
+    font-size: 10px;
+    line-height: 13px;
+    cursor: pointer;
+  }
+}
+
+@include vp-1023 {
+  .reservation {
+    padding-top: 88px;
+    padding-bottom: 100px;
+
+    @include retina-bg("../img/bg/bg-glacier-in-sea-tablet");
+  }
+
+  .reservation__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reservation__text-container {
+    margin-top: 0;
+    margin-right: 0;
+
+    h2 {
+      font-size: 34px;
+      line-height: 51px;
+    }
+
+    p {
+      max-width: 352px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .reservation__form-container {
+    margin-top: 48px;
+  }
+}
+
+@include vp-767 {
+  .reservation {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    @include retina-bg("../img/bg/bg-glacier-in-sea-mobile");
+  }
+
+  .reservation__text-container {
+    h2 {
+      max-width: 194px;
+      margin: 0 auto 7px auto;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+    }
+
+    p {
+      max-width: 257px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .reservation__form-container {
+    width: 100%;
+    margin-top: 37px;
+    padding: 33px 30px 40px 30px;
+
+    p {
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+
+  .reservation__form {
+    padding-top: 33px;
+  }
+
+  .reservation__input-container {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .reservation__input-container--checkbox {
+    margin-bottom: 0;
+
+    input[type="checkbox"] {
+      width: 23px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    input[type="checkbox"]:checked::after {
+      top: 9px;
+    }
+  }
+}
