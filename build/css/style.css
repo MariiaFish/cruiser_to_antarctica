@@ -1055,13 +1055,27 @@ button,
   position: relative;
 }
 
+.catalog__item:focus-within .catalog__item-main-cover,
+.catalog__item:hover .catalog__item-main-cover {
+  display: none;
+}
+
+.catalog__item:focus-within .catalog__item-hover-cover,
+.catalog__item:hover .catalog__item-hover-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .catalog__item-hover-cover {
+  position: absolute;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   padding: 25px 25px 33px 25px;
@@ -1094,17 +1108,6 @@ button,
 
 .catalog__item-main-cover {
   position: relative;
-}
-
-.catalog__item-main-cover.focus-visible:focus {
-  display: none;
-}
-
-.catalog__item-main-cover:hover + .catalog__item-hover-cover,
-.catalog__item-main-cover:focus + .catalog__item-hover-cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .catalog__item-main-cover h3 {
@@ -2183,8 +2186,6 @@ button,
   }
 
   .catalog__item-hover-cover {
-    padding-left: 25px;
-    padding-top: 26px;
     min-height: 386px;
   }
 
@@ -2417,10 +2418,6 @@ button,
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
-  }
-
-  .catalog__item-main-cover:hover:not(.focus-visible) {
-    display: none;
   }
 }
 

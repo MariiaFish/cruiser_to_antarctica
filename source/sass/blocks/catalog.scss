@@ -23,12 +23,24 @@
 
 .catalog__item {
   position: relative;
+
+  &:focus-within .catalog__item-main-cover,
+  &:hover .catalog__item-main-cover {
+    display: none;
+  }
+
+  &:focus-within .catalog__item-hover-cover,
+  &:hover .catalog__item-hover-cover {
+    display: flex;
+  }
 }
 
 .catalog__item-hover-cover {
+  position: absolute;
   display: none;
   flex-direction: column;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   padding: 25px 25px 33px 25px;
@@ -65,16 +77,6 @@
 
 .catalog__item-main-cover {
   position: relative;
-
-
-  @include hover-focus {
-    display: none;
-  }
-
-  &:hover + .catalog__item-hover-cover,
-  &:focus + .catalog__item-hover-cover {
-    display: flex;
-  }
 
   h3 {
     margin: 0;
@@ -155,8 +157,7 @@
   }
 
   .catalog__item-hover-cover {
-    padding-left: 25px;
-    padding-top: 26px;
+    // position: relative;
     min-height: 386px;
   }
 

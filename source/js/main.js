@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {setNavigationMenu} from './modules/modals/navigation-menu';
+import {setForm} from './modules/modals/form-setting';
 
 // ---------------------------------
 
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   setNavigationMenu();
+  setForm();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

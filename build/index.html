@@ -122,7 +122,7 @@
       <section class="catalog container" id="catalog">
         <h2>Ближайшие круизы</h2>
         <ul class="list catalog__list">
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -165,7 +165,7 @@
             </div>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -208,7 +208,7 @@
             </div>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -251,7 +251,7 @@
             </div>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -294,7 +294,7 @@
             </div>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -338,7 +338,7 @@
             </div>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -382,7 +382,7 @@
             </div>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -425,7 +425,7 @@
             </div>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
                 <source type="image/webp" media="(max-width: 768px)"
@@ -481,23 +481,22 @@
           <div class="reservation__form-container">
             <p class="reservation__form-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
             </p>
+
             <form class="reservation__form" action="https://echo.htmlacademy.ru/">
               <div class="reservation__input-container">
-                <label class="visually-hidden" for="guest-name">Имя</label>
-                <input class="reservation__input" type="text" id="guest-name" name="guest-name" placeholder="Имя"
-                  required>
+                <label class="visually-hidden" for="name">Имя</label>
+                <input class="reservation__input" type="text" id="name" name="name" placeholder="Имя" required>
               </div>
 
               <div class="reservation__input-container">
-                <label class="visually-hidden" for="guest-phone">Телефон</label>
-                <input class="reservation__input" type="text" id="guest-phone" name="guest-phone" placeholder="Телефон"
-                  required>
+                <label class="visually-hidden" for="phone">Телефон</label>
+                <input class="reservation__input" type="number" id="phone" name="phone" placeholder="Телефон" required>
               </div>
 
               <div class="reservation__input-container">
-                <label class="visually-hidden" for="guest-email">Email</label>
-                <input class="reservation__input__input" type="email" id="guest-email" name="guest-email"
-                  placeholder="Email" required>
+                <label class="visually-hidden" for="email">Email</label>
+                <input class="reservation__input__input" type="email" id="email" name="email" placeholder="Email"
+                  required>
               </div>
 
               <div class="reservation__input-container reservation__input-container--checkbox">
