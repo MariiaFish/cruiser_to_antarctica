@@ -52,6 +52,7 @@
   top: 30px;
   left: 30px;
   background-image: url("../img/svg/liner.svg");
+  background-size: 27px 32px;
   background-repeat: no-repeat;
 }
 
@@ -63,6 +64,7 @@
   top: 30px;
   left: 30px;
   background-image: url("../img/svg/double-check-mark.svg");
+  background-size: 38px 32px;
   background-repeat: no-repeat;
 }
 
@@ -74,6 +76,7 @@
   top: 30px;
   left: 30px;
   background-image: url("../img/svg/ship.svg");
+  background-size: 44px 32px;
   background-repeat: no-repeat;
 }
 
@@ -113,6 +116,7 @@
     height: 26px;
     top: 26px;
     left: 20px;
+    background-size: 21px 26px;
   }
 
   .advantages__item--all-inclusive::after {
@@ -120,6 +124,7 @@
     height: 26px;
     top: 26px;
     left: 20px;
+    background-size: 27px 26px;
   }
 
   .advantages__item--zodiac::after {
@@ -127,6 +132,7 @@
     height: 26px;
     top: 26px;
     left: 20px;
+    background-size: 36px 26px;
   }
 }
 
@@ -152,11 +158,19 @@
   }
 
   .advantages__item {
-    padding: 68px 15px 25px 20px;
+    padding: 71px 15px 20px 20px;
     min-height: 100%;
 
     h3 {
       margin-right: 80px;
     }
+  }
+
+  .advantages__item--all-inclusive::after {
+    top: 24px;
+  }
+
+  .advantages__item--zodiac::after {
+    top: 23px;
   }
 }

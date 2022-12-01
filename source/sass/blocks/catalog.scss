@@ -24,11 +24,6 @@
 .catalog__item {
   position: relative;
 
-  &:focus-within .catalog__item-main-cover,
-  &:hover .catalog__item-main-cover {
-    display: none;
-  }
-
   &:focus-within .catalog__item-hover-cover,
   &:hover .catalog__item-hover-cover {
     display: flex;
@@ -134,7 +129,7 @@
 
 @include vp-767 {
   .catalog {
-    padding-top: 45px;
+    padding-top: 51px;
     padding-bottom: 65px;
 
     h2 {
@@ -157,8 +152,9 @@
   }
 
   .catalog__item-hover-cover {
-    // position: relative;
     min-height: 386px;
+    padding-left: 25px;
+    padding-top: 30px;
   }
 
   .catalog__cruise-description-item {
