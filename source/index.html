@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>ProjectName</title>
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -82,15 +83,15 @@
           </div>
           <div class="lead__img">
             <picture>
-              <source type="image/webp" media="(max-width: 767px)"
+              <!-- <source type="image/webp" media="(max-width: 767px)"
                 srcset="img/penguins-mobile.webp 1x, img/penguins-mobile@2x.webp 2x">
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/penguins-tablet.webp 1x, img/penguins-tablet@2x.webp 2x">
               <source media="(max-width: 767px)" srcset="img/penguins-mobile.jpg 1x, img/penguins-mobile@2x.jpg 2x">
-              <source media="(max-width: 1023px)" srcset="img/penguins-tablet.jpg 1x, img/penguins-tablet@2x.jpg 2x">
+              <source media="(max-width: 1023px)" srcset="img/penguins-tablet.jpg 1x, img/penguins-tablet@2x.jpg 2x"> -->
               <source type="image/webp" srcset="img/penguins-desktop.webp 1x, img/penguins-desktop@2x.webp 2x">
-              <img class="img img--lead lead__img" src="img/penguins-desktop.jpg" width="560" height="301"
-                alt="Пингвины гуляют на фоне снежной Антарктики">
+              <img class="img img--lead lead__img" srcset="img/penguins-desktop.jpg 1x, img/penguins-desktop2x.jpg 2x"
+                width="560" height="301" alt="Пингвины гуляют на фоне снежной Антарктики">
             </picture>
           </div>
         </div>
@@ -125,18 +126,19 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/astoria-cruise-mobile.webp 1x, img/catalog/astoria-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/astoria-cruise-mobile.jpg 1x, img/catalog/astoria-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/astoria-cruise-tablet.webp 1x, img/catalog/astoria-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/astoria-cruise-tablet.jpg 1x, img/catalog/astoria-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/astoria-cruise-tablet.jpg 1x, img/catalog/astoria-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/astoria-cruise-desktop.webp 1x, img/catalog/astoria-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/astoria-cruise-desktop.jpg" width="260"
-                  height="386" alt="Изображение ледника на фоне горы, вид со скованного льдом моря">
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/astoria-cruise-desktop.jpg 1x, img/catalog/astoria-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386" alt="Изображение ледника на фоне горы, вид со скованного льдом моря">
               </picture>
               <h3>Круиз “Астория”</h3>
             </div>
@@ -168,18 +170,20 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/elain-cruise-mobile.webp 1x, img/catalog/elain-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/elain-cruise-mobile.jpg 1x, img/catalog/elain-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/elain-cruise-tablet.webp 1x, img/catalog/elain-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/elain-cruise-tablet.jpg 1x, img/catalog/elain-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/elain-cruise-tablet.jpg 1x, img/catalog/elain-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/elain-cruise-desktop.webp 1x, img/catalog/elain-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/elain-cruise-desktop.jpg" width="260"
-                  height="386" alt="Изображение парусного катера на спущенных парусах, в море на фоне заснеженных гор">
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/elain-cruise-desktop.jpg 1x, img/catalog/elain-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386"
+                  alt="Изображение парусного катера на спущенных парусах, в море на фоне заснеженных гор">
               </picture>
               <h3>Круиз “Элайн”</h3>
             </div>
@@ -211,18 +215,19 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/atlantis-cruise-mobile.webp 1x, img/catalog/atlantis-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/atlantis-cruise-mobile.jpg 1x, img/catalog/atlantis-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/atlantis-cruise-tablet.webp 1x, img/catalog/atlantis-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/atlantis-cruise-tablet.jpg 1x, img/catalog/atlantis-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/atlantis-cruise-tablet.jpg 1x, img/catalog/atlantis-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/atlantis-cruise-desktop.webp 1x, img/catalog/atlantis-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/atlantis-cruise-desktop.jpg" width="260"
-                  height="386" alt="Изображение айсбергов частично покрытых снегом, в море">
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/atlantis-cruise-desktop.jpg 1x, img/catalog/atlantis-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386" alt="Изображение айсбергов частично покрытых снегом, в море">
               </picture>
               <h3>Круиз “Атлантис”</h3>
             </div>
@@ -254,18 +259,20 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/odissei-cruise-mobile.webp 1x, img/catalog/odissei-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/odissei-cruise-mobile.jpg 1x, img/catalog/odissei-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/odissei-cruise-tablet.webp 1x, img/catalog/odissei-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/odissei-cruise-tablet.jpg 1x, img/catalog/odissei-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/odissei-cruise-tablet.jpg 1x, img/catalog/odissei-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/odissei-cruise-desktop.webp 1x, img/catalog/odissei-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/odissei-cruise-desktop.jpg" width="260"
-                  height="386" alt="Изображение заснеженных гор, на фоне моря, вид с берега частично покрытого снегом">
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/odissei-cruise-desktop.jpg 1x, img/catalog/odissei-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386"
+                  alt="Изображение заснеженных гор, на фоне моря, вид с берега частично покрытого снегом">
               </picture>
               <h3>Круиз “Одиссей”</h3>
             </div>
@@ -297,18 +304,19 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/olimpia-cruise-mobile.webp 1x, img/catalog/olimpia-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/olimpia-cruise-mobile.jpg 1x, img/catalog/olimpia-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/olimpia-cruise-tablet.webp 1x, img/catalog/olimpia-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/olimpia-cruise-tablet.jpg 1x, img/catalog/olimpia-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/olimpia-cruise-tablet.jpg 1x, img/catalog/olimpia-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/olimpia-cruise-desktop.webp 1x, img/catalog/olimpia-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/olimpia-cruise-desktop.jpg" width="260"
-                  height="386"
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/olimpia-cruise-desktop.jpg 1x, img/catalog/olimpia-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386"
                   alt="Изображение большой стаи пингвинов на покрытом льдом и снегом берегу, на фоне моря и огромного айсберга в дали, вид с берега">
               </picture>
               <h3>Круиз “Олимпия”</h3>
@@ -341,19 +349,20 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/avrora-cruise-mobile.webp 1x, img/catalog/avrora-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/avrora-cruise-mobile.jpg 1x, img/catalog/avrora-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/avrora-cruise-tablet.webp 1x, img/catalog/avrora-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/avrora-cruise-tablet.jpg 1x, img/catalog/avrora-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/avrora-cruise-tablet.jpg 1x, img/catalog/avrora-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/avrora-cruise-desktop.webp 1x, img/catalog/avrora-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/avrora-cruise-desktop.jpg" width="260"
-                  height="386"
-                  alt="Изображение морской бухты, с плавающими в ней айсбергами, берег бухты частично покрыт льдом и снегом, вид с берега">
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/avrora-cruise-desktop.jpg 1x, img/catalog/avrora-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386" alt="Изображение морской бухты, с плавающими в ней айсбергами, берег бухты частично покрыт льдом и
+                снегом, вид с берега">
               </picture>
               <h3>Круиз “Аврора”</h3>
             </div>
@@ -385,18 +394,20 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/leonor-cruise-mobile.webp 1x, img/catalog/leonor-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/leonor-cruise-mobile.jpg 1x, img/catalog/leonor-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/leonor-cruise-tablet.webp 1x, img/catalog/leonor-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/leonor-cruise-tablet.jpg 1x, img/catalog/leonor-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/leonor-cruise-tablet.jpg 1x, img/catalog/leonor-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/leonor-cruise-desktop.webp 1x, img/catalog/leonor-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/leonor-cruise-desktop.jpg" width="260"
-                  height="386" alt="Изображение парусного катера на спущенных парусах, в море на фоне заснеженных гор">
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/leonor-cruise-desktop.jpg 1x, img/catalog/leonor-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386"
+                  alt="Изображение парусного катера на спущенных парусах, в море на фоне заснеженных гор">
               </picture>
               <h3>Круиз “Леонор”</h3>
             </div>
@@ -428,18 +439,19 @@
           <li class="catalog__item" tabindex="0">
             <div class="catalog__item-main-cover">
               <picture>
-                <source type="image/webp" media="(max-width: 768px)"
+                <!-- <source type="image/webp" media="(max-width: 768px)"
                   srcset="img/catalog/minion-1-cruise-mobile.webp 1x, img/catalog/minion-1-cruise-mobile@2x.webp 2x">
                 <source media="(max-width: 768px)"
                   srcset="img/catalog/minion-1-cruise-mobile.jpg 1x, img/catalog/minion-1-cruise-mobile@2x.jpg 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/catalog/minion-1-cruise-tablet.webp 1x, img/catalog/minion-1-cruise-tablet@2x.webp 2x">
                 <source media="(max-width: 1023px)"
-                  srcset="img/catalog/minion-1-cruise-tablet.jpg 1x, img/catalog/minion-1-cruise-tablet@2x.jpg 2x">
+                  srcset="img/catalog/minion-1-cruise-tablet.jpg 1x, img/catalog/minion-1-cruise-tablet@2x.jpg 2x"> -->
                 <source type="image/webp"
                   srcset="img/catalog/minion-1-cruise-desktop.webp 1x, img/catalog/minion-1-cruise-desktop@2x.webp 2x">
-                <img class="img img--catalog catalog__img" src="img/catalog/minion-1-cruise-desktop.jpg" width="260"
-                  height="386"
+                <img class="img img--catalog catalog__img"
+                  srcset="img/catalog/minion-1-cruise-desktop.jpg 1x, img/catalog/minion-1-cruise-desktop@2x.jpg 2x"
+                  width="260" height="386"
                   alt="Изображение гуляющих вдоль морской бухты пингвинов, в дали видны огромные заснеженные горы, вид с берега">
               </picture>
               <h3>Круиз “Минион - 1”</h3>
@@ -490,7 +502,7 @@
 
               <div class="reservation__input-container">
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input class="reservation__input" type="number" id="phone" name="phone" placeholder="Телефон" required>
+                <input class="reservation__input" type="tel" id="phone" name="phone" placeholder="Телефон" required>
               </div>
 
               <div class="reservation__input-container">

@@ -427,6 +427,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
 }
@@ -809,6 +810,7 @@ button,
 }
 
 .header {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -821,6 +823,11 @@ button,
   -ms-flex-align: center;
   align-items: center;
   margin-top: 24px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 2;
 }
 
@@ -851,8 +858,8 @@ button,
   position: relative;
   width: 100%;
   min-height: 780px;
-  padding-top: 20px;
-  margin-top: -15%;
+  padding-top: 374px;
+  padding-left: 94px;
   background-color: #003973;
   background-repeat: no-repeat;
   background-size: cover;
@@ -877,9 +884,6 @@ button,
 }
 
 .main-section__title {
-  position: absolute;
-  top: 375px;
-  left: 199px;
   color: #ffffff;
 }
 
@@ -1523,7 +1527,6 @@ button,
   .header {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    margin-top: 17px;
   }
 
   .header__navigation {
@@ -1542,7 +1545,8 @@ button,
 
   .main-section {
     min-height: 708px;
-    margin-top: -17%;
+    padding-left: 0;
+    padding-top: 323px;
   }
 
 @supports not (background-image: url("../img/../img/bg/bg-antarctic-sea-tablet.webp")) {
@@ -1556,11 +1560,6 @@ button,
       background-image: url("../img/../img/bg/bg-antarctic-sea-tablet.webp");
     }
 }
-
-  .main-section__title {
-    left: 45px;
-    top: 323px;
-  }
 
   .pharagraph--main-section {
     font-size: 50px;
@@ -1898,8 +1897,6 @@ button,
   }
 
   .header {
-    position: relative;
-    margin-top: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1940,7 +1937,7 @@ button,
     position: absolute;
     display: block;
     top: 20px;
-    right: 4%;
+    right: 12%;
     width: 13px;
     height: 13px;
     padding: 10px;
@@ -2002,6 +1999,7 @@ button,
   }
 
   [data-navigation-menu=open] .header {
+    position: relative;
     background-color: #ffffff;
   }
 
@@ -2048,7 +2046,7 @@ button,
 
   .main-section {
     min-height: 551px;
-    margin-top: -96px;
+    padding-top: 212px;
     background-position: bottom;
   }
 
@@ -2063,11 +2061,6 @@ button,
       background-image: url("../img/../img/bg/bg-antarctic-sea-mobile.webp");
     }
 }
-
-  .main-section__title {
-    top: 211px;
-    left: 15px;
-  }
 
   .pharagraph--main-section {
     font-size: 36px;
@@ -2196,6 +2189,8 @@ button,
 
   .catalog__item-hover-cover {
     min-height: 386px;
+    padding-left: 25px;
+    padding-top: 30px;
   }
 
   .catalog__cruise-description-item {
@@ -2250,6 +2245,7 @@ button,
   }
 
   .navigation__list--footer {
+    padding-top: 0;
     margin-bottom: 18px;
   }
 
@@ -2272,7 +2268,7 @@ button,
   }
 
   .reservation {
-    padding-top: 65px;
+    padding-top: 63px;
     padding-bottom: 65px;
   }
 
@@ -2290,7 +2286,7 @@ button,
 
   .reservation__text-container h2 {
     max-width: 194px;
-    margin: 0 auto 7px auto;
+    margin: 0 auto 11px auto;
     font-size: 24px;
     line-height: 31px;
     text-align: center;
@@ -2304,7 +2300,7 @@ button,
 
   .reservation__form-container {
     width: 100%;
-    margin-top: 37px;
+    margin-top: 35px;
     padding: 33px 30px 40px 30px;
   }
 
@@ -2314,12 +2310,12 @@ button,
   }
 
   .reservation__form {
-    padding-top: 33px;
+    padding-top: 30px;
   }
 
   .reservation__input-container {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   .reservation__input-container--checkbox {
@@ -2334,6 +2330,10 @@ button,
 
   .reservation__input-container--checkbox input[type=checkbox]:checked::after {
     top: 9px;
+  }
+
+  .reservation__submit-btn {
+    margin-top: 26px;
   }
 
   .contacts {
