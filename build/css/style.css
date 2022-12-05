@@ -1055,6 +1055,10 @@ button,
   line-height: 42px;
 }
 
+.catalog .img {
+  height: 100%;
+}
+
 .catalog__list {
   display: -ms-grid;
   display: grid;
@@ -1065,6 +1069,9 @@ button,
 }
 
 .catalog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
@@ -1090,7 +1097,7 @@ button,
   grid-row-start: 1;
   -ms-grid-row-span: -2;
   grid-row-end: -1;
-  z-index: 0;
+  z-index: -1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1263,12 +1270,12 @@ button,
 
 .reservation__text-container {
   margin-right: 16px;
-  margin-top: 166px;
+  margin-top: 160px;
 }
 
 .reservation__text-container h2 {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   font-size: 40px;
   line-height: 60px;
 }
@@ -1292,7 +1299,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   width: 403px;
-  padding: 45px 50px 50px;
+  padding: 40px 50px 50px;
   background-color: #011c40;
 }
 
@@ -1664,7 +1671,7 @@ button,
   }
 
   .advantages {
-    padding-top: 91px;
+    padding-top: 89px;
     padding-bottom: 100px;
   }
 
@@ -1737,9 +1744,17 @@ button,
     font-size: 26px;
   }
 
+  .catalog .img {
+    height: 386px;
+  }
+
   .catalog__list {
     -ms-grid-columns: (48%)[2];
     grid-template-columns: repeat(2, 48%);
+  }
+
+  .catalog__item {
+    display: initial;
   }
 
   .catalog__item-main-cover h3 {
@@ -1749,6 +1764,7 @@ button,
 
   .catalog__item-hover-cover {
     padding-left: 34px;
+    padding-bottom: 17px;
     background-color: #011c40;
   }
 
@@ -1779,7 +1795,7 @@ button,
     -moz-column-gap: 0;
     column-gap: 0;
     margin-left: 10px;
-    margin-top: 11px;
+    margin-top: 6px;
   }
 
   .social__link {
@@ -1834,6 +1850,7 @@ button,
   }
 
   .reservation__text-container h2 {
+    margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
   }
@@ -1845,7 +1862,11 @@ button,
   }
 
   .reservation__form-container {
-    margin-top: 48px;
+    margin-top: 53px;
+  }
+
+  .reservation__submit-btn {
+    margin-top: 32px;
   }
 
   .contacts {
@@ -1868,6 +1889,10 @@ button,
       background-image: url("../img/../img/map-tablet.webp");
     }
 }
+
+  .contacts__adress {
+    padding-left: 24px;
+  }
 
   .contacts__information {
     width: 324px;
@@ -2246,6 +2271,7 @@ button,
     min-height: 386px;
     padding-left: 25px;
     padding-top: 28px;
+    padding-bottom: 15px;
   }
 
   .catalog__cruise-description-item {

@@ -25,11 +25,11 @@
 
 .reservation__text-container {
   margin-right: 16px;
-  margin-top: 166px;
+  margin-top: 160px;
 
   h2 {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 
     font-size: 40px;
     line-height: 60px;
@@ -49,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   width: 403px;
-  padding: 45px 50px 50px;
+  padding: 40px 50px 50px;
   background-color: $color-tangaroa;
 
   p {
@@ -146,6 +146,7 @@
     margin-right: 0;
 
     h2 {
+      margin-bottom: 5px;
       font-size: 34px;
       line-height: 51px;
     }
@@ -158,7 +159,11 @@
   }
 
   .reservation__form-container {
-    margin-top: 48px;
+    margin-top: 53px;
+  }
+
+  .reservation__submit-btn {
+    margin-top: 32px;
   }
 }
 

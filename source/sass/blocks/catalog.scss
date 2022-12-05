@@ -11,6 +11,10 @@
     font-size: 28px;
     line-height: 42px;
   }
+
+  .img {
+    height: 100%;
+  }
 }
 
 .catalog__list {
@@ -22,6 +26,7 @@
 }
 
 .catalog__item {
+  display: flex;
   position: relative;
 
   &:focus-within .catalog__item-hover-cover,
@@ -40,7 +45,7 @@
   grid-column-end: -1;
   grid-row-start: 1;
   grid-row-end: -1;
-  z-index: 0;
+  z-index: -1;
   flex-direction: column;
 
   width: 100%;
@@ -116,10 +121,18 @@
     h2 {
       font-size: 26px;
     }
+
+    .img {
+      height: 386px;
+    }
   }
 
   .catalog__list {
     grid-template-columns: repeat(2, 48%);
+  }
+
+  .catalog__item {
+    display: initial;
   }
 
   .catalog__item-main-cover {
@@ -131,6 +144,7 @@
 
   .catalog__item-hover-cover {
     padding-left: 34px;
+    padding-bottom: 17px;
     background-color: $color-tangaroa;
   }
 
@@ -168,6 +182,7 @@
     min-height: 386px;
     padding-left: 25px;
     padding-top: 28px;
+    padding-bottom: 15px;
   }
 
   .catalog__cruise-description-item {

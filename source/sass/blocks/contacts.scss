@@ -79,6 +79,11 @@
     @include retina-bg("../img/map-tablet");
   }
 
+  .contacts__adress {
+    padding-left: 24px;
+    margin-right: 33px;
+  }
+
   .contacts__information {
     width: 324px;
     margin-top: 68px;
@@ -86,10 +91,6 @@
     p {
       margin-bottom: 28px;
     }
-  }
-
-  .contacts__adress {
-    margin-right: 33px;
   }
 }
 
