@@ -27,18 +27,25 @@
   &:focus-within .catalog__item-hover-cover,
   &:hover .catalog__item-hover-cover {
     display: flex;
+    z-index: 5;
   }
 }
 
+.catalog__item-container {
+  display: grid;
+}
+
 .catalog__item-hover-cover {
-  position: absolute;
-  display: none;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  z-index: 0;
   flex-direction: column;
-  top: 0;
-  left: 0;
+
   width: 100%;
   height: 100%;
-  padding: 25px 25px 33px 25px;
+  padding: 29px 25px 29px;
 
   color: $color-white;
   background-color: $color-prussian-blue;
@@ -72,6 +79,11 @@
 
 .catalog__item-main-cover {
   position: relative;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  z-index: 2;
 
   h3 {
     margin: 0;
@@ -98,7 +110,7 @@
 
 @include vp-1023 {
   .catalog {
-    padding-top: 89px;
+    padding-top: 86px;
     padding-bottom: 100px;
 
     h2 {
@@ -123,13 +135,14 @@
   }
 
   .catalog__cruise-description-list {
-    margin-top: 16px;
+    margin-top: 14px;
+    margin-bottom: 6%;
   }
 }
 
 @include vp-767 {
   .catalog {
-    padding-top: 51px;
+    padding-top: 57px;
     padding-bottom: 65px;
 
     h2 {
@@ -154,7 +167,7 @@
   .catalog__item-hover-cover {
     min-height: 386px;
     padding-left: 25px;
-    padding-top: 30px;
+    padding-top: 28px;
   }
 
   .catalog__cruise-description-item {

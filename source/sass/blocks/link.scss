@@ -1,4 +1,20 @@
 .link {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
+  &--logo-index {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+
   &--navigation {
     color: $color-default-white;
     font-weight: 500;

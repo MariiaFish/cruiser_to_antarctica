@@ -7,6 +7,14 @@
   height: 38px;
 }
 
+.logo__link {
+  cursor: pointer;
+
+  &--index {
+    cursor: default;
+  }
+}
+
 @include vp-1023 {
   .logo__icon {
     width: 38px;

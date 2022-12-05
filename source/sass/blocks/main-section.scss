@@ -1,8 +1,8 @@
 .main-section {
   position: relative;
   width: 100%;
-  min-height: 780px;
-  padding-top: 374px;
+  min-height: 650px;
+  padding-top: 260px;
   padding-left: 94px;
   background-color: $color-prussian-blue;
   background-repeat: no-repeat;
@@ -23,9 +23,9 @@
 
 @include vp-1023 {
   .main-section {
-    min-height: 708px;
+    min-height: 638px;
     padding-left: 0;
-    padding-top: 323px;
+    padding-top: 257px;
 
     @include retina-bg("../img/bg/bg-antarctic-sea-tablet");
   }
@@ -33,8 +33,8 @@
 
 @include vp-767 {
   .main-section {
-    min-height: 551px;
-    padding-top: 212px;
+    min-height: 500px;
+    padding-top: 164px;
     background-position: bottom;
 
     @include retina-bg("../img/bg/bg-antarctic-sea-mobile");

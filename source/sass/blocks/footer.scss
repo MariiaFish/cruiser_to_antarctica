@@ -25,8 +25,13 @@
 }
 
 @include vp-1023 {
+  .footer {
+    padding-top: 42px;
+  }
+
   .footer__logo {
     margin-right: 25px;
+    margin-top: 8px;
   }
 
   .footer__navigation {

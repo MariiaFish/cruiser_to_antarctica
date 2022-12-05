@@ -6,6 +6,16 @@
   background-size: cover;
 
   @include retina-bg("../img/bg/bg-glacier-in-sea-desktop");
+
+  textarea,
+  input {
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+  }
 }
 
 .reservation__container {
@@ -63,6 +73,7 @@
     width: 100%;
     padding: 11px 16px;
     border: none;
+    color: $color-default-black;
   }
 
   input::placeholder {
@@ -153,7 +164,7 @@
 
 @include vp-767 {
   .reservation {
-    padding-top: 63px;
+    padding-top: 60px;
     padding-bottom: 65px;
 
     @include retina-bg("../img/bg/bg-glacier-in-sea-mobile");
