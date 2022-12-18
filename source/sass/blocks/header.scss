@@ -34,7 +34,6 @@
 
 @include vp-767 {
   .header {
-    // width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
@@ -127,6 +126,7 @@
     }
 
     .header.container {
+      position: absolute;
       width: 100%;
       margin: 0 0 0 35px;
       padding: 20px 16px 0 15px;
@@ -152,10 +152,12 @@
     .header__navigation-list {
       flex-direction: column;
       flex-wrap: wrap;
+      margin-top: 35px;
+      margin-bottom: 30px;
     }
 
     .header__navigation-item {
-      margin-bottom: 5px;
+      margin-bottom: 16px;
     }
 
     .header__navigation-link {

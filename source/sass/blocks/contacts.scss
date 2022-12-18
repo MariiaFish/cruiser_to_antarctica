@@ -52,6 +52,7 @@
 }
 
 .contacts__phone {
+  display: block;
   position: relative;
   padding-left: 28px;
 }
@@ -70,7 +71,7 @@
 @include vp-1023 {
   .contacts {
     padding-top: 100px;
-    padding-bottom: 103px;
+    padding-bottom: 101px;
   }
 
   .contacts__map {
@@ -80,17 +81,26 @@
   }
 
   .contacts__adress {
-    padding-left: 24px;
+    padding-left: 25px;
     margin-right: 33px;
+    margin-bottom: 21px;
   }
 
   .contacts__information {
     width: 324px;
-    margin-top: 68px;
+    margin-top: 66px;
 
     p {
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
+  }
+
+  .contacts__adress::before {
+    top: 6px;
+  }
+
+  .contacts__phone::before {
+    top: 3px;
   }
 }
 

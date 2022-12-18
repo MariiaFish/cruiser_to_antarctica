@@ -71,7 +71,7 @@
 
   input {
     width: 100%;
-    padding: 11px 16px;
+    padding: 11px 18px;
     border: none;
     color: $color-default-black;
   }
@@ -85,7 +85,7 @@
 }
 
 .reservation__input-container {
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .reservation__submit-btn {
@@ -141,6 +141,10 @@
     align-items: center;
   }
 
+  .reservation__input-container:not(.reservation__input-container--checkbox) {
+    margin-bottom: 22px;
+  }
+
   .reservation__text-container {
     margin-top: 0;
     margin-right: 0;
@@ -158,8 +162,15 @@
     }
   }
 
+  .reservation__form {
+    input {
+      padding-left: 17px;
+    }
+  }
+
   .reservation__form-container {
     margin-top: 53px;
+    padding-top: 44px;
   }
 
   .reservation__submit-btn {
@@ -204,6 +215,10 @@
 
   .reservation__form {
     padding-top: 30px;
+
+    input {
+      padding-left: 15px;
+    }
   }
 
   .reservation__input-container {

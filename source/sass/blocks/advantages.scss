@@ -2,6 +2,8 @@
   padding-top: 110px;
   padding-bottom: 120px;
 
+  background-color: $color-pattens-blue;
+
   @include retina-bg("../img/bg/bg-antarctic-sea-snow-effect-desktop");
 
   h2 {
@@ -18,17 +20,17 @@
 .advantages__list {
   display: grid;
   grid-template-columns: repeat(3, 31%);
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .advantages__item {
   position: relative;
-  padding: 77px 30px 43px 30px;
+  padding: 81px 30px 43px 30px;
   background-color: $color-white;
 
   h3 {
     margin-top: 0;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 
     font-weight: 500;
     font-size: 18px;
@@ -97,7 +99,7 @@
 
   .advantages__list {
     grid-template-columns: repeat(3, 30%);
-    column-gap: 32px;
+    gap: 32px;
   }
 
   .advantages__item {
@@ -153,7 +155,7 @@
 
   .advantages__list {
     grid-template-columns: 1fr;
-    column-gap: 0;
+    gap: 0;
     row-gap: 30px;
   }
 

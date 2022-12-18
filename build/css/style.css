@@ -615,7 +615,7 @@ button,
 }
 
 .scroll-lock {
-  overflow: hidden;
+  position: fixed;
 }
 
 .no-scrollbar {
@@ -668,6 +668,8 @@ button,
 
 .btn--catalog-order {
   max-width: 210px;
+  padding-top: 8px;
+  padding-bottom: 11px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -901,7 +903,7 @@ button,
 }
 
 .logo {
-  margin: 10px;
+  margin: 10px 10px 10px 0;
 }
 
 .logo__icon {
@@ -951,6 +953,7 @@ button,
 .advantages {
   padding-top: 110px;
   padding-bottom: 120px;
+  background-color: #D0DEEA;
 }
 
 @supports not (background-image: url("../img/../img/bg/bg-antarctic-sea-snow-effect-desktop.webp")) {
@@ -979,20 +982,18 @@ button,
   display: grid;
   -ms-grid-columns: (31%)[3];
   grid-template-columns: repeat(3, 31%);
-  -webkit-column-gap: 40px;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .advantages__item {
   position: relative;
-  padding: 77px 30px 43px 30px;
+  padding: 81px 30px 43px 30px;
   background-color: #f9fbfd;
 }
 
 .advantages__item h3 {
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1103,8 +1104,8 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  padding: 29px 25px 29px;
+  height: 386px;
+  padding: 28px 25px 30px;
   color: #f9fbfd;
   background-color: #003973;
 }
@@ -1157,9 +1158,17 @@ button,
 }
 
 .catalog__cruise-description-list {
-  margin-top: 19px;
-  margin-bottom: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 14px;
   width: 100%;
+  min-height: 241px;
+  overflow: scroll;
 }
 
 .catalog__cruise-description-item {
@@ -1208,17 +1217,19 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
+  margin-right: -20px;
 }
 
 .navigation__item {
   display: block;
   margin-bottom: 0;
+}
+
+.navigation__item {
+  margin-right: 20px;
 }
 
 .navigation__link {
@@ -1228,16 +1239,18 @@ button,
 .social__list {
   display: -ms-grid;
   display: grid;
-  row-gap: 20px;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
   -ms-grid-columns: (-webkit-min-content)[3];
   -ms-grid-columns: (min-content)[3];
   grid-template-columns: repeat(3, -webkit-min-content);
   grid-template-columns: repeat(3, min-content);
-  margin-top: 13px;
+  margin-top: 9px;
 }
 
 .social__link {
-  padding: 8px 0 8px 28px;
+  padding: 8px 0 8px 8px;
 }
 
 .reservation {
@@ -1329,7 +1342,7 @@ button,
 
 .reservation__form input {
   width: 100%;
-  padding: 11px 16px;
+  padding: 11px 18px;
   border: none;
   color: #000000;
 }
@@ -1370,7 +1383,7 @@ button,
 }
 
 .reservation__input-container {
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .reservation__submit-btn {
@@ -1485,6 +1498,7 @@ button,
 }
 
 .contacts__phone {
+  display: block;
   position: relative;
   padding-left: 28px;
 }
@@ -1666,6 +1680,8 @@ button,
   }
 
   .img--catalog {
+    -o-object-fit: cover;
+    object-fit: cover;
     width: 100%;
     height: 386px;
   }
@@ -1696,9 +1712,7 @@ button,
   .advantages__list {
     -ms-grid-columns: (30%)[3];
     grid-template-columns: repeat(3, 30%);
-    -webkit-column-gap: 32px;
-    -moz-column-gap: 32px;
-    column-gap: 32px;
+    gap: 32px;
   }
 
   .advantages__item {
@@ -1769,8 +1783,7 @@ button,
   }
 
   .catalog__cruise-description-list {
-    margin-top: 14px;
-    margin-bottom: 6%;
+    margin-top: 17px;
   }
 
   .footer {
@@ -1790,16 +1803,16 @@ button,
     padding: 13px 0;
   }
 
-  .social__list {
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
-    margin-left: 10px;
-    margin-top: 6px;
+  .navigation__item {
+    margin-right: 14px;
   }
 
-  .social__link {
-    padding-left: 22px;
+  .social__list {
+    -webkit-column-gap: 13px;
+    -moz-column-gap: 13px;
+    column-gap: 13px;
+    margin-left: 10px;
+    margin-top: 5px;
   }
 
   .social__icon--ok {
@@ -1844,6 +1857,10 @@ button,
     align-items: center;
   }
 
+  .reservation__input-container:not(.reservation__input-container--checkbox) {
+    margin-bottom: 22px;
+  }
+
   .reservation__text-container {
     margin-top: 0;
     margin-right: 0;
@@ -1861,8 +1878,13 @@ button,
     text-align: center;
   }
 
+  .reservation__form input {
+    padding-left: 17px;
+  }
+
   .reservation__form-container {
     margin-top: 53px;
+    padding-top: 44px;
   }
 
   .reservation__submit-btn {
@@ -1871,7 +1893,7 @@ button,
 
   .contacts {
     padding-top: 100px;
-    padding-bottom: 103px;
+    padding-bottom: 101px;
   }
 
   .contacts__map {
@@ -1891,20 +1913,26 @@ button,
 }
 
   .contacts__adress {
-    padding-left: 24px;
+    padding-left: 25px;
+    margin-right: 33px;
+    margin-bottom: 21px;
   }
 
   .contacts__information {
     width: 324px;
-    margin-top: 68px;
+    margin-top: 66px;
   }
 
   .contacts__information p {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
-  .contacts__adress {
-    margin-right: 33px;
+  .contacts__adress::before {
+    top: 6px;
+  }
+
+  .contacts__phone::before {
+    top: 3px;
   }
 }
 
@@ -2073,6 +2101,7 @@ button,
   }
 
   [data-navigation-menu=open] .header.container {
+    position: absolute;
     width: 100%;
     margin: 0 0 0 35px;
     padding: 20px 16px 0 15px;
@@ -2103,10 +2132,12 @@ button,
     flex-direction: column;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    margin-top: 35px;
+    margin-bottom: 30px;
   }
 
   [data-navigation-menu=open] .header__navigation-item {
-    margin-bottom: 5px;
+    margin-bottom: 16px;
   }
 
   [data-navigation-menu=open] .header__navigation-link {
@@ -2222,9 +2253,7 @@ button,
   .advantages__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
+    gap: 0;
     row-gap: 30px;
   }
 
@@ -2274,12 +2303,16 @@ button,
     padding-bottom: 15px;
   }
 
+  .catalog__cruise-description-list {
+    margin-top: 14px;
+  }
+
   .catalog__cruise-description-item {
     padding-bottom: 12px;
   }
 
   .footer {
-    padding-top: 40px;
+    padding-top: 43px;
     padding-bottom: 40px;
   }
 
@@ -2294,7 +2327,7 @@ button,
   }
 
   .footer__logo {
-    margin: 0 40px 15px 0;
+    margin: 0 40px 14px 0;
   }
 
   .footer__navigation-list {
@@ -2305,7 +2338,7 @@ button,
   }
 
   .footer__navigation {
-    margin-right: 20px;
+    margin-right: 0;
   }
 
   .footer__social {
@@ -2317,8 +2350,9 @@ button,
   }
 
   .navigation__list {
-    padding-top: 28px;
-    margin-bottom: 30px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    margin: 0;
   }
 
   .navigation__link {
@@ -2327,13 +2361,12 @@ button,
 
   .navigation__list--footer {
     padding-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 26px;
   }
 
   .navigation__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    margin-right: 0;
+    margin-bottom: -2px;
   }
 
   .navigation__link--footer {
@@ -2346,7 +2379,7 @@ button,
   }
 
   .social__link {
-    padding: 8px 21px 8px 0;
+    padding: 8px 8px 8px 0;
   }
 
   .reservation {
@@ -2393,6 +2426,10 @@ button,
 
   .reservation__form {
     padding-top: 30px;
+  }
+
+  .reservation__form input {
+    padding-left: 15px;
   }
 
   .reservation__input-container {

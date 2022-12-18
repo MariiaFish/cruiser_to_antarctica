@@ -1,23 +1,19 @@
 .social__list {
   display: grid;
-  row-gap: 20px;
+  column-gap: 20px;
   grid-template-columns: repeat(3, min-content);
-  margin-top: 13px;
+  margin-top: 9px;
 }
 
 .social__link {
-  padding: 8px 0 8px 28px;
+  padding: 8px 0 8px 8px;
 }
 
 @include vp-1023 {
   .social__list {
-    column-gap: 0;
+    column-gap: 13px;
     margin-left: 10px;
-    margin-top: 6px;
-  }
-
-  .social__link {
-    padding-left: 22px;
+    margin-top: 5px;
   }
 
   .social__icon--ok {
@@ -43,6 +39,6 @@
   }
 
   .social__link {
-    padding: 8px 21px 8px 0;
+    padding: 8px 8px 8px 0;
   }
 }
