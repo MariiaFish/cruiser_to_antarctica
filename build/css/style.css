@@ -953,7 +953,7 @@ button,
 .advantages {
   padding-top: 110px;
   padding-bottom: 120px;
-  background-color: #D0DEEA;
+  background-color: #d0deea;
 }
 
 @supports not (background-image: url("../img/../img/bg/bg-antarctic-sea-snow-effect-desktop.webp")) {
@@ -1070,9 +1070,6 @@ button,
 }
 
 .catalog__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
 }
 
@@ -1167,7 +1164,7 @@ button,
   flex-direction: column;
   margin-top: 14px;
   width: 100%;
-  min-height: 241px;
+  height: 241px;
   overflow: scroll;
 }
 
@@ -1204,6 +1201,8 @@ button,
 
 .footer__social {
   margin-left: auto;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .navigation {
@@ -1226,9 +1225,6 @@ button,
 .navigation__item {
   display: block;
   margin-bottom: 0;
-}
-
-.navigation__item {
   margin-right: 20px;
 }
 
@@ -1246,7 +1242,7 @@ button,
   -ms-grid-columns: (min-content)[3];
   grid-template-columns: repeat(3, -webkit-min-content);
   grid-template-columns: repeat(3, min-content);
-  margin-top: 9px;
+  margin-top: 14px;
 }
 
 .social__link {
@@ -1501,6 +1497,7 @@ button,
   display: block;
   position: relative;
   padding-left: 28px;
+  margin-top: 10px;
 }
 
 .contacts__phone::before {
