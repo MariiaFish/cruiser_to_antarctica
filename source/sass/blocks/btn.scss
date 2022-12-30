@@ -29,6 +29,7 @@
     line-height: 21px;
   }
 
+
   &--reservation-submit {
     font-weight: 600;
     font-size: 14px;
@@ -47,6 +48,14 @@
 
   @include hover-focus {
     opacity: 0.8;
+  }
+}
+
+@include vp-1132 {
+  .btn {
+    &--catalog-order {
+      padding: 8px 6px;
+    }
   }
 }
 

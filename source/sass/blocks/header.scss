@@ -142,11 +142,12 @@
       top: 48px;
       right: 0;
       width: 100%;
-      min-height: calc(100 * var(--vh, 1vh) - 48px);
+      height: calc(100 * var(--vh, 1vh) - 48px);
       padding-left: 25px;
       align-self: flex-start;
       background-color: $color-default-white;
       z-index: 5;
+      overflow-y: auto;
     }
 
     .header__navigation-list {

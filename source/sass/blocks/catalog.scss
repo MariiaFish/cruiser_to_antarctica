@@ -26,8 +26,9 @@
 }
 
 .catalog__item {
-  // display: flex;
+  display: flex;
   position: relative;
+  word-break: break-word;
 
   &:focus-within .catalog__item-hover-cover,
   &:hover .catalog__item-hover-cover {
@@ -38,6 +39,7 @@
 
 .catalog__item-container {
   display: grid;
+  // justify-content: center;
 }
 
 .catalog__item-hover-cover {
@@ -116,6 +118,12 @@
   padding-bottom: 11px;
 }
 
+@include vp-1281 {
+  .catalog__list {
+    gap: 20px;
+  }
+}
+
 @include vp-1023 {
   .catalog {
     padding-top: 86px;
@@ -132,6 +140,7 @@
 
   .catalog__list {
     grid-template-columns: repeat(2, 48%);
+    gap: 30px;
   }
 
   .catalog__item {
@@ -175,9 +184,14 @@
   }
 
   .catalog__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: max-content;
+    justify-content: center;
 
     margin: 0 10px;
+  }
+
+  .catalog__item {
+    max-width: 500px;
   }
 
   .catalog__item-hover-cover {
@@ -193,5 +207,11 @@
 
   .catalog__cruise-description-item {
     padding-bottom: 12px;
+  }
+}
+
+@include vp-536 {
+  .catalog__list {
+    grid-template-columns: 1fr;
   }
 }

@@ -1070,7 +1070,11 @@ button,
 }
 
 .catalog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+  word-break: break-word;
 }
 
 .catalog__item:focus-within .catalog__item-hover-cover,
@@ -1238,6 +1242,7 @@ button,
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
+  row-gap: 20px;
   -ms-grid-columns: (-webkit-min-content)[3];
   -ms-grid-columns: (min-content)[3];
   grid-template-columns: repeat(3, -webkit-min-content);
@@ -1575,6 +1580,16 @@ button,
   .lead__text {
     margin-top: 0;
   }
+
+  .catalog__list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1132px) {
+  .btn--catalog-order {
+    padding: 8px 6px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1677,8 +1692,6 @@ button,
   }
 
   .img--catalog {
-    -o-object-fit: cover;
-    object-fit: cover;
     width: 100%;
     height: 386px;
   }
@@ -1762,6 +1775,7 @@ button,
   .catalog__list {
     -ms-grid-columns: (48%)[2];
     grid-template-columns: repeat(2, 48%);
+    gap: 30px;
   }
 
   .catalog__item {
@@ -2114,12 +2128,13 @@ button,
     top: 48px;
     right: 0;
     width: 100%;
-    min-height: calc(100 * var(--vh, 1vh) - 48px);
+    height: calc(100 * var(--vh, 1vh) - 48px);
     padding-left: 25px;
     -ms-flex-item-align: start;
     align-self: flex-start;
     background-color: #ffffff;
     z-index: 5;
+    overflow-y: auto;
   }
 
   [data-navigation-menu=open] .header__navigation-list {
@@ -2220,8 +2235,13 @@ button,
   }
 
   .img--lead {
-    width: 290px;
+    width: 20px;
     height: 156px;
+  }
+
+  .img--catalog {
+    max-width: 100%;
+    height: 386px;
   }
 
   .advantages {
@@ -2288,9 +2308,18 @@ button,
   }
 
   .catalog__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: -webkit-max-content;
+    -ms-grid-columns: max-content;
+    grid-template-columns: -webkit-max-content;
+    grid-template-columns: max-content;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin: 0 10px;
+  }
+
+  .catalog__item {
+    max-width: 500px;
   }
 
   .catalog__item-hover-cover {
@@ -2538,6 +2567,13 @@ button,
       background-image: url("../img/../img/map-mobile@2x.webp");
     }
 }
+}
+
+@media (max-width: 534px) {
+  .catalog__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (hover: hover) {
