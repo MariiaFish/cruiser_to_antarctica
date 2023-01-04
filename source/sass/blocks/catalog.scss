@@ -12,21 +12,22 @@
     line-height: 42px;
   }
 
-  .img {
-    height: 100%;
-  }
+  // .img {
+  //   height: 100%;
+  // }
 }
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(4, 23%);
+  justify-content: center;
+  grid-template-columns: repeat(4, 260px);
   gap: 30px;
 
   margin: 0 15px;
 }
 
 .catalog__item {
-  display: flex;
+  // display: flex;
   position: relative;
   word-break: break-word;
 
@@ -118,6 +119,36 @@
   padding-bottom: 11px;
 }
 
+@include vp-1354 {
+  .catalog__list {
+    grid-template-columns: repeat(3, 309px);
+    gap: 30px;
+  }
+
+  .catalog__item-main-cover {
+    h3 {
+      bottom: 28px;
+      left: 35px;
+    }
+  }
+
+  .catalog__item-hover-cover {
+    padding-left: 34px;
+    padding-bottom: 17px;
+    background-color: $color-tangaroa;
+  }
+
+  .catalog__item {
+    display: initial;
+  }
+}
+
+@include vp-1164 {
+  .catalog__list {
+    grid-template-columns: repeat(2, 370px);
+  }
+}
+
 @include vp-1281 {
   .catalog__list {
     gap: 20px;
@@ -139,26 +170,25 @@
   }
 
   .catalog__list {
-    grid-template-columns: repeat(2, 48%);
-    gap: 30px;
+    grid-template-columns: repeat(2, 309px);
   }
 
-  .catalog__item {
-    display: initial;
-  }
+  // .catalog__item {
+  //   display: initial;
+  // }
 
-  .catalog__item-main-cover {
-    h3 {
-      bottom: 28px;
-      left: 35px;
-    }
-  }
+  // .catalog__item-main-cover {
+  //   h3 {
+  //     bottom: 28px;
+  //     left: 35px;
+  //   }
+  // }
 
-  .catalog__item-hover-cover {
-    padding-left: 34px;
-    padding-bottom: 17px;
-    background-color: $color-tangaroa;
-  }
+  // .catalog__item-hover-cover {
+  //   padding-left: 34px;
+  //   padding-bottom: 17px;
+  //   background-color: $color-tangaroa;
+  // }
 
   .catalog__cruise-description-list {
     margin-top: 17px;
@@ -184,15 +214,15 @@
   }
 
   .catalog__list {
-    grid-template-columns: max-content;
+    grid-template-columns: 270px;
     justify-content: center;
 
     margin: 0 10px;
   }
 
-  .catalog__item {
-    max-width: 500px;
-  }
+  // .catalog__item {
+  //   max-width: 500px;
+  // }
 
   .catalog__item-hover-cover {
     min-height: 386px;
@@ -210,8 +240,8 @@
   }
 }
 
-@include vp-536 {
-  .catalog__list {
-    grid-template-columns: 1fr;
-  }
-}
+// @include vp-536 {
+//   .catalog__list {
+//     grid-template-columns: 1fr;
+//   }
+// }

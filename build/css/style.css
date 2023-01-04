@@ -1056,23 +1056,19 @@ button,
   line-height: 42px;
 }
 
-.catalog .img {
-  height: 100%;
-}
-
 .catalog__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (23%)[4];
-  grid-template-columns: repeat(4, 23%);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-grid-columns: (260px)[4];
+  grid-template-columns: repeat(4, 260px);
   gap: 30px;
   margin: 0 15px;
 }
 
 .catalog__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   word-break: break-word;
 }
@@ -1576,6 +1572,36 @@ button,
   }
 }
 
+@media (max-width: 1354px) {
+  .img--catalog {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 309px;
+    height: 386px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: (309px)[3];
+    grid-template-columns: repeat(3, 309px);
+    gap: 30px;
+  }
+
+  .catalog__item-main-cover h3 {
+    bottom: 28px;
+    left: 35px;
+  }
+
+  .catalog__item-hover-cover {
+    padding-left: 34px;
+    padding-bottom: 17px;
+    background-color: #011c40;
+  }
+
+  .catalog__item {
+    display: initial;
+  }
+}
+
 @media (max-width: 1279px) {
   .lead__text {
     margin-top: 0;
@@ -1583,6 +1609,17 @@ button,
 
   .catalog__list {
     gap: 20px;
+  }
+}
+
+@media (max-width: 1164px) {
+  .img--catalog {
+    width: 370px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: (370px)[2];
+    grid-template-columns: repeat(2, 370px);
   }
 }
 
@@ -1692,8 +1729,7 @@ button,
   }
 
   .img--catalog {
-    width: 100%;
-    height: 386px;
+    width: 309px;
   }
 
   .advantages {
@@ -1773,24 +1809,8 @@ button,
   }
 
   .catalog__list {
-    -ms-grid-columns: (48%)[2];
-    grid-template-columns: repeat(2, 48%);
-    gap: 30px;
-  }
-
-  .catalog__item {
-    display: initial;
-  }
-
-  .catalog__item-main-cover h3 {
-    bottom: 28px;
-    left: 35px;
-  }
-
-  .catalog__item-hover-cover {
-    padding-left: 34px;
-    padding-bottom: 17px;
-    background-color: #011c40;
+    -ms-grid-columns: (309px)[2];
+    grid-template-columns: repeat(2, 309px);
   }
 
   .catalog__cruise-description-list {
@@ -2235,13 +2255,12 @@ button,
   }
 
   .img--lead {
-    width: 20px;
+    width: 290px;
     height: 156px;
   }
 
   .img--catalog {
-    max-width: 100%;
-    height: 386px;
+    max-width: 270px;
   }
 
   .advantages {
@@ -2308,18 +2327,12 @@ button,
   }
 
   .catalog__list {
-    -ms-grid-columns: -webkit-max-content;
-    -ms-grid-columns: max-content;
-    grid-template-columns: -webkit-max-content;
-    grid-template-columns: max-content;
+    -ms-grid-columns: 270px;
+    grid-template-columns: 270px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0 10px;
-  }
-
-  .catalog__item {
-    max-width: 500px;
   }
 
   .catalog__item-hover-cover {
@@ -2567,13 +2580,6 @@ button,
       background-image: url("../img/../img/map-mobile@2x.webp");
     }
 }
-}
-
-@media (max-width: 534px) {
-  .catalog__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (hover: hover) {
